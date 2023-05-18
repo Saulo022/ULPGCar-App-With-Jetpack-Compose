@@ -11,13 +11,19 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
+import com.example.ulpgcarapp.common.components.DatePickerComposable
 import com.example.ulpgcarapp.screens.search.SearchScreen
 import com.example.ulpgcarapp.screens.search.SearchViewModel
+import com.example.ulpgcarapp.screens.search.choose_options.SearchOptionsScreen
 import com.example.ulpgcarapp.ui.theme.ULPGCarAppTheme
 
 class MainActivity : ComponentActivity() {
 
     private val searchViewModel: SearchViewModel by viewModels()
+
+    lateinit var navController: NavHostController
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -27,7 +33,8 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    SearchScreen()
+                    navController = rememberNavController()
+                    SetupNavGraph(navController = navController)
                 }
             }
         }

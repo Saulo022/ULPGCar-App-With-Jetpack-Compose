@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ULPGCar App</string>
+    <string name="texto_universidad">Universidad</string>
+    <string name="texto_casa">Casa</string>
 </resources>
