@@ -10,8 +10,8 @@ import androidx.navigation.navArgument
 import com.example.ulpgcarapp.screens.search.SearchScreen
 import com.example.ulpgcarapp.screens.search.choose_options.SearchOptionsScreen
 
-@Composable
-fun SetupNavGraph(
+//@Composable
+/*fun SetupNavGraph(
     navController: NavHostController
 ) {
     NavHost(
@@ -34,3 +34,5 @@ fun SetupNavGraph(
         }
     }
 }
+
+ */
